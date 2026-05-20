@@ -14,6 +14,16 @@ Generate a structured `CHANGELOG.md` from the current repository's git history.
 - Skips merge commits.
 - Categorizes commit subjects into `Added`, `Fixed`, `Changed`, and `Removed`.
 
+## Validation
+
+Run the included smoke test from this repository root:
+
+```bash
+bash generate-changelog/test-changelog.sh ./changelog.sh
+```
+
+The test creates a temporary git repository with a tag, generates a changelog from post-tag commits, and verifies all four output categories.
+
 ## Sample Output
 
 Tested against this repository on `main`, which has no git tags:
