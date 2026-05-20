@@ -24,3 +24,12 @@ This checklist maps the bounty requirements to the files and commands in this PR
 
 - README with setup instructions in 3 steps or fewer
   - `generate-changelog/README.md` has a three-step setup section.
+
+## Verification Commands
+
+```bash
+bash -n changelog.sh
+bash generate-changelog/test-changelog.sh ./changelog.sh
+```
+
+The branch also includes `.github/workflows/generate-changelog.yml`, which runs the same syntax and smoke-test checks on push and pull request events.
