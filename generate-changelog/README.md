@@ -8,6 +8,13 @@ Generate a structured `CHANGELOG.md` from the current repository's git history.
 2. Run `bash changelog.sh` to generate `CHANGELOG.md`.
 3. Optionally pass a custom output path: `bash changelog.sh docs/CHANGELOG.md`.
 
+## Claude Code Entrypoints
+
+This PR includes both Claude Code invocation styles:
+
+- `.claude/commands/generate-changelog.md` exposes `/generate-changelog` as a project slash command.
+- `.claude/skills/generate-changelog/SKILL.md` exposes the same workflow as a project skill.
+
 ## What It Does
 
 - Reads commits since the most recent git tag, or all commits when no tag exists.
